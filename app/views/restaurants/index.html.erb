@@ -1,0 +1,15 @@
+<div class="d-flex flex-column container">
+<h1 class="text-center">Liste des restaurants</h1>
+
+<ul id="restaurants" class="text-center">
+  <% @restaurants.each do |restaurant| %>
+    <li style="list-style: none">
+      <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Ajouter un restaurant', new_restaurant_path, class: "btn btn-primary" %>
+</div>
+
+
